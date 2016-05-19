@@ -45,7 +45,8 @@ qplot(`sum(steps)`,data = total_step, geom = 'histogram',binwidth=500,xlab = 'to
 mean_total_step<- mean(total_step$'sum(steps)')
 median_total_step<- median(total_step$'sum(steps)')
 ```
-
+The mean of total number of steps taken per day is *9354.22950819672*.  
+The median of total number of steps taken per day is *10395*
 
 ## What is the average daily activity pattern?
 
@@ -61,7 +62,7 @@ qplot(interval,`mean(steps)`,data = average_step,geom = 'line',xlab = '5 min int
 max_steps<- max(average_step[,'mean(steps)'])
 max_ID<- average_step%>%filter(`mean(steps)`==max_steps)%>%select(interval)
 ```
-
+Interval *835* on average across all the days in the dataset, contains the maximum number of steps
 
 ## Imputing missing values
 
@@ -87,7 +88,8 @@ qplot(`sum(steps)`,data = total_step, geom = 'histogram',binwidth=1000,xlab = 't
 mean_total_step<- mean(total_step$'sum(steps)')
 median_total_step<- median(total_step$'sum(steps)')
 ```
-
+The mean of total number of steps taken per day is *10766.1886792453*.  
+The median of total number of steps taken per day is *10766.1886792453*
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
